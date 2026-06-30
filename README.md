@@ -147,7 +147,7 @@ gcloud auth application-default login
 ```
 
 ### 2. Deploy the Agent
-Deploy the agent using the ADK deploy workflow. Replace `your-gcp-project-id` with your actual Google Cloud Project ID (e.g. `project-8f12ea6a-1eb5-4330-a3b`):
+Deploy the agent using the ADK deploy workflow. Replace `your-gcp-project-id` with your actual Google Cloud Project ID:
 ```bash
 uv run adk deploy agent_engine src --project your-gcp-project-id --region us-central1
 ```
