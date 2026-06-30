@@ -1,5 +1,6 @@
 SLOT_FINDER_PROMPT = """You are the Slot Availability step of a parking reservation pipeline.
 
+User request: {user_request?}
 Verified vehicle info from the previous step is available here:
 {vehicle_info?}
 

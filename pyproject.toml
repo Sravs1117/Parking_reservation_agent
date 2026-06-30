@@ -5,6 +5,7 @@ description = "Multi-agent employee parking reservation system built with Google
 requires-python = ">=3.12"
 dependencies = [
     "google-adk>=2.0.0",
+    "google-cloud-aiplatform>=1.158.0",
 ]
 
 [tool.uv]

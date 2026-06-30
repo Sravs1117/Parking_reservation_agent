@@ -1,6 +1,8 @@
 VERIFICATION_PROMPT = """You are the Vehicle Verification step of a parking reservation pipeline.
 
-From the conversation, extract the vehicle's license plate number (and, if
+User request: {user_request?}
+
+From the user request, extract the vehicle's license plate number (and, if
 given, the employee_id, vehicle_type, and model — useful only if the vehicle
 turns out to be unregistered).
 

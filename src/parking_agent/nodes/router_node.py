@@ -11,6 +11,8 @@ router_agent = LlmAgent(
     output_schema=str
 )
 
-def route_parser(node_input: str):
+def route_parser(node_input: str, ctx):
     route = node_input.strip().strip('"\'')
+    # Save active route to state, but do not set 'output' of the Event.
+    # This prevents the user query from being printed twice in the trace log.
     return Event(route=route, state={"active_route": route})
