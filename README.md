@@ -151,3 +151,10 @@ Deploy the agent using the ADK deploy workflow. Replace `your-gcp-project-id` wi
 ```bash
 uv run adk deploy agent_engine src --project your-gcp-project-id --region us-central1
 ```
+
+### 3. Interact with the Deployed Cloud Agent
+You can connect the local ADK developer UI to your live cloud deployment to run inputs and test interactions as a thin client:
+```bash
+uv run adk web src --session_service_uri "agentengine://YOUR_AGENT_RESOURCE_ID"
+```
+*(Replace `YOUR_AGENT_RESOURCE_ID` with the Resource ID printed in the console output after the deployment finishes, e.g., `projects/.../locations/us-central1/reasoningEngines/...`)*
