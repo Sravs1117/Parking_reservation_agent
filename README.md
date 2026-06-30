@@ -132,3 +132,22 @@ uv run adk web
 ```
 - Open the printed URL (typically `http://127.0.0.1:8000/dev-ui/?app=src`).
 - Start conversing with the agent! Refer to `sample_prompts.md` for test scripts.
+
+---
+
+## Deployment to Vertex AI Agent Engine
+
+Once you have verified the agent locally, you can deploy it to Google Cloud Vertex AI Agent Engine:
+
+### 1. Authenticate with Google Cloud
+Run the following commands to log in and set up local credentials:
+```bash
+gcloud auth login
+gcloud auth application-default login
+```
+
+### 2. Deploy the Agent
+Deploy the agent using the ADK deploy workflow. Replace `your-gcp-project-id` with your actual Google Cloud Project ID (e.g. `project-8f12ea6a-1eb5-4330-a3b`):
+```bash
+uv run adk deploy agent_engine src --project your-gcp-project-id --region us-central1
+```
