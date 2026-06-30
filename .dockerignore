@@ -1,0 +1,20 @@
+# Ignore virtual env and system caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local database and secret configurations
+db/*.db
+.env
+project-*.json
+
+# Ignore git and local editor configs
+.git/
+.gitignore
+.vscode/
+.idea/
+README.md
+sample_prompts.md
