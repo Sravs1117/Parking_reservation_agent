@@ -1,8 +1,18 @@
-# Sample Prompts
+# Sample Prompts & Commands
 
-Start the local server by running `uv run adk web` and select **`src`** in the top-left dropdown (if not already selected). 
+### 🖥️ 1. Test Locally (Development Server)
+To run the developer server locally:
+```bash
+uv run adk web
+```
 
-You can try these prompts to test all workflow branches, routing rules, and constraints:
+### ☁️ 2. Test Deployed Cloud Agent
+To connect the developer Web UI to your live cloud agent deployed on Vertex AI Reasoning Engine:
+```bash
+uv run adk web src --session_service_uri "agentengine://projects/project-8f12ea6a-1eb5-4330-a3b/locations/us-central1/reasoningEngines/4364778038026567680"
+```
+
+You can try the following prompts to test all workflow branches, routing rules, and constraints:
 
 ---
 
